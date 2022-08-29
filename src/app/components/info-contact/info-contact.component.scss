@@ -1,0 +1,14 @@
+.info {
+  width: 100%;
+  overflow: hidden;
+  p {
+    margin: 10px;
+    font-size: 26px;
+    overflow: hidden;
+    width: 100%;
+
+    span {
+      font-style: italic;
+    }
+  }
+}

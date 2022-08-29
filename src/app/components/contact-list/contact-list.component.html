@@ -1,0 +1,23 @@
+<input
+  type="text"
+  class="input"
+  (keyup)="filter($event)"
+  placeholder="search ..."
+/>
+
+<app-add-contact-form (addCont)="addContact($event)"></app-add-contact-form>
+
+<div class="contact" *ngFor="let contact of contacts; let i = index">
+  <a [routerLink]="['/contact', i]">
+    <p>{{ contact.name }}</p>
+    <p>{{ contact.phone }}</p>
+  </a>
+  <p class="del" (click)="deleteContact(i)">x</p>
+</div>
+
+<div class="no" *ngIf="contacts.length === 0">
+  <p>No Contacts</p>
+  <button *ngIf="!isFiltered" class="get" (click)="getMyContacts()">
+    get contacts
+  </button>
+</div>

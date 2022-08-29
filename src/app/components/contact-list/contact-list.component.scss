@@ -1,0 +1,77 @@
+@import "./../../../styles.scss";
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 22px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.contact {
+  background-color: $blue;
+
+  border-radius: 10px;
+  margin-bottom: 20px;
+  // padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    width: 100%;
+
+    overflow: hidden;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+    p {
+      margin: 20px;
+      font-size: 26px;
+      @media (max-width: 750px) {
+        margin: 5px 15px;
+      }
+    }
+  }
+
+  .del {
+    cursor: pointer;
+    font-size: 26px;
+    margin: 20px;
+  }
+}
+.no {
+  background-color: $blue;
+  padding: 20px;
+  border-radius: 10px;
+
+  p {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .get {
+    display: block;
+
+    border: 1px solid #cccccc;
+    height: 40px;
+    line-height: 22px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
